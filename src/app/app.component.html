@@ -1,19 +1,26 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<head>
+  <style>
+  p    {font-size: 20pt; display: inline-block;}
+  button {margin-left: 15px; font-size: 13px;}
+  input {margin-left: 45%; text-align: center;}
+ 
+  
+  </style>
+  </head>
+<h1 align="center">To Do List</h1>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<ul align="center" class="list-group">
+    <div class="list-group-item" *ngFor="let todo of todoList">
+        <div class="view">
+          <p align="center">• {{todo.title}}</p>
+          <button type="button" (click)=deleteTodo() class="btn btn-danger btn-sm">Delete</button>
+          </div>
+        </div>
+    </ul>
+    <input align="center" type="text" class="todo-input" placeholder="Add new to do item..." [(ngModel)]="todoTitle" (keyup.enter)=addTodo()>
+    
+
 
 
 

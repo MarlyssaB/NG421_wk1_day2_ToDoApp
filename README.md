@@ -101,7 +101,8 @@
     ```html
     <input type="text" class="todo-input" placeholder="Add next todo here">
     ```
-
+    You stopped here
+******************************************************************************************************************************************************************
 1. Now we can type in text on the screen but we'll need to capture the event and save the input! So let's import a module called: FormsModule to help us get the input and make it available to our component's class. In the `app.module.ts` file under the `import { NgModule } from '@angular/core'` line write: `import { FormsModule } from '@angular/forms'`.
 1. Then in the `@NgModule.imports` array add in `FormsModule` under `AppRoutingModule,` *Be sure to add the `,` in.*
 1. Now that we have this helper module in place let's use it! Back in our `app.component.html` template file add this attribute to your `<input>` tag: `[(ngModel)]="todoTitle"`. *This will use the Model from our FormsModule import to talk to our component's class.*
